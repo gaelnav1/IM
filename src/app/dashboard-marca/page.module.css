@@ -1,0 +1,451 @@
+.shell {
+  display: flex;
+  min-height: 100vh;
+  background: var(--gray-50);
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 240px;
+  flex-shrink: 0;
+  background: #fff;
+  border-right: 1px solid var(--gray-200);
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 1rem;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.sidebarLogo {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--gray-900);
+  padding: 0 0.75rem 1.5rem;
+  border-bottom: 1px solid var(--gray-200);
+  margin-bottom: 1rem;
+}
+
+.sidebarLogo span { color: var(--purple-600); }
+
+.sidebarNav {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 12px;
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  color: var(--gray-600);
+  cursor: pointer;
+  transition: background 0.12s, color 0.12s;
+}
+
+.navItem:hover { background: var(--gray-100); color: var(--gray-900); }
+
+.navActive {
+  background: var(--purple-50);
+  color: var(--purple-800);
+  font-weight: 500;
+}
+
+.navIcon { font-size: 14px; width: 18px; text-align: center; }
+
+.sidebarFooter {
+  border-top: 1px solid var(--gray-200);
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.userRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.userAvatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--purple-50);
+  color: var(--purple-800);
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.userName {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--gray-900);
+}
+
+.userRole {
+  font-size: 11px;
+  color: var(--gray-400);
+}
+
+.backLink {
+  font-size: 12px;
+  color: var(--gray-400);
+  transition: color 0.12s;
+}
+
+.backLink:hover { color: var(--gray-600); }
+
+/* MAIN */
+.main {
+  flex: 1;
+  padding: 2rem 2.5rem;
+  overflow-y: auto;
+  max-width: 1100px;
+}
+
+.topbar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.pageTitle {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: var(--gray-900);
+}
+
+.pageSubtitle {
+  font-size: 14px;
+  color: var(--gray-400);
+  margin-top: 3px;
+}
+
+.btnNew {
+  background: var(--purple-600);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.15s;
+  font-family: var(--font-body);
+}
+
+.btnNew:hover { background: var(--purple-800); }
+
+/* METRICS */
+.metricsRow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 2rem;
+}
+
+.metricCard {
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+}
+
+.metricLabel {
+  font-size: 12px;
+  color: var(--gray-400);
+  margin-bottom: 6px;
+}
+
+.metricValue {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 4px;
+}
+
+.metricDelta {
+  font-size: 12px;
+}
+
+/* SECTION */
+.section {
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-xl);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.sectionHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.sectionHead h2 {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--gray-900);
+}
+
+.badge {
+  font-size: 11px;
+  background: var(--purple-50);
+  color: var(--purple-800);
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+/* CAMPAIGNS */
+.campaignList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.campaignRow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--gray-50);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--gray-200);
+}
+
+.campaignInfo { flex: 1; min-width: 0; }
+
+.campaignName {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--gray-900);
+  margin-bottom: 3px;
+}
+
+.campaignMeta {
+  font-size: 12px;
+  color: var(--gray-400);
+}
+
+.campaignProgress {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 140px;
+  flex-shrink: 0;
+}
+
+.progressBar {
+  flex: 1;
+  height: 5px;
+  background: var(--gray-200);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.3s;
+}
+
+.progressLabel {
+  font-size: 12px;
+  color: var(--gray-600);
+  min-width: 28px;
+  text-align: right;
+}
+
+.campaignBudget {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--gray-900);
+  width: 80px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.statusPill {
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+.status_active { background: var(--teal-50); color: var(--teal-800); }
+.status_review { background: #FAEEDA; color: #633806; }
+.status_draft  { background: var(--gray-100); color: var(--gray-600); }
+
+/* SEARCH */
+.searchRow {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.searchInput {
+  flex: 1;
+  min-width: 180px;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  padding: 8px 12px;
+  font-size: 13px;
+  font-family: var(--font-body);
+  color: var(--gray-900);
+  background: #fff;
+  outline: none;
+}
+
+.searchInput:focus { border-color: var(--purple-400); }
+
+.filterSelect {
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  padding: 8px 12px;
+  font-size: 13px;
+  font-family: var(--font-body);
+  color: var(--gray-600);
+  background: #fff;
+  outline: none;
+  cursor: pointer;
+}
+
+/* INFLUENCER GRID */
+.infGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 12px;
+}
+
+.infCard {
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: border-color 0.15s;
+  background: var(--gray-50);
+}
+
+.infCard:hover { border-color: var(--purple-400); }
+
+.infTop {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.infAvatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.infName {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--gray-900);
+}
+
+.infCat {
+  font-size: 11px;
+  color: var(--gray-400);
+  line-height: 1.4;
+}
+
+.infStats {
+  display: flex;
+  gap: 8px;
+}
+
+.infStat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-sm);
+  padding: 6px 4px;
+}
+
+.infStatVal {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--gray-900);
+}
+
+.infStatLabel {
+  font-size: 10px;
+  color: var(--gray-400);
+}
+
+.platforms {
+  display: flex;
+  gap: 5px;
+}
+
+.platformTag {
+  font-size: 10px;
+  background: var(--gray-100);
+  color: var(--gray-600);
+  padding: 2px 8px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+.btnInvite {
+  background: var(--purple-600);
+  color: #fff;
+  border: none;
+  padding: 8px;
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  font-weight: 500;
+  font-family: var(--font-body);
+  transition: background 0.15s;
+}
+
+.btnInvite:hover { background: var(--purple-800); }
+
+@media (max-width: 900px) {
+  .metricsRow { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .sidebar { display: none; }
+  .main { padding: 1.25rem; }
+  .metricsRow { grid-template-columns: 1fr 1fr; }
+}
